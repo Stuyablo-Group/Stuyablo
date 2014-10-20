@@ -33,7 +33,15 @@ public class baseChar {
     }
 
     public String attack(baseChar other) {
-	other.Health-=Strength;
-	return (this + " attacks "+ other);
+	if (canHit()) {
+	    other.Health-=Strength;
+	    return (this + " attacks "+ other);
+	} else {
+	    return (this + " attacks "+ other + " and missed");
+	}
+    }
+    public boolean canHit() {
+	Random randint = new Random();
+	return (Precision >= randint.nextInt(10));
     }
 }

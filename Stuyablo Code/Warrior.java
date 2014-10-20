@@ -6,6 +6,7 @@ public class Warrior extends baseChar {
 	setName(name);
 	setHealth(100);
 	setStrength(20);
-	setPrecision(10);
+	setPrecision(7);
+	shieldBlock = 3;
     }
 }
